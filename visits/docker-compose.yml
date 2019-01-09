@@ -1,0 +1,9 @@
+version: '3' # REQUIRED: version of docker-compose we are trying to use with this YML file
+services:           
+  redis-server:     # create container (service) called redis-server
+    image: 'redis'  # use the 'redis' image to do so
+  node-app:
+    restart: on-failure 
+    build: .        # look in the current directory for Dockerfile, and use that to build the iamge for this container
+    ports:
+      - "4001:8081" # forward port 4001 on local machine to port 8081 in container
