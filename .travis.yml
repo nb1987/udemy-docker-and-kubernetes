@@ -13,4 +13,4 @@ before_install:
 # return status code of something other than 0, travis will assume our test-suite
 # failed to run properly
 script:
-  - docker run nb1987/docker-react npm run test
+  - docker run nb1987/docker-react npm run test -- --coverage
