@@ -7,7 +7,7 @@ services:
 # series of commands executed before we start to either run tests or deploy project
 before_install:
   # command to build our docker image
-  - docker build -t nb1987/docker-react -f ./frontend/Dockerfile.dev ./frontend
+  - docker build -t nb1987/docker-react -f ./frontend/Dockerfile ./frontend
 # script section contains all the commands necessary to execute our test suite
 # travis-ci will watch the output of each of these commands; if any one has a 
 # return status code of something other than 0, travis will assume our test-suite
@@ -28,6 +28,3 @@ deploy:
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key:
     secure: "$AWS_KEY_SECRET"
-  
-  # key: b8ddw2FFr1V17NJ6KLE69vQ0KKA24FQ7yv2kb8v9
-  # key ID: AKIAJPJU43G5REF6C54A
