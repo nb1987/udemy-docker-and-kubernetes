@@ -8,4 +8,6 @@ RUN npm run build
 
 # begin second config block ('phase')
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
+# default command of nginx image starts up nginx, so no need to specify a CMD here!
