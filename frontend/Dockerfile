@@ -1,8 +1,8 @@
 FROM node:alpine AS builder
 WORKDIR '/app'
-COPY package.json .
+COPY package*.json ./
 RUN npm install 
-COPY . .
+COPY ./ ./
 # below command will produce output in a folder in $WORKDIR/build, e.g. in this case /app/build
 RUN npm run build 
 
