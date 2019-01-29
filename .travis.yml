@@ -19,10 +19,10 @@ script:
 deploy:
   provider: elasticbeanstalk
   region: "us-east-1"
-  app: "docker-react"
-  env: "DockerReact-env"
+  app: "my-docker-react-app"
+  env: "MyDockerReactApp-env"
   bucket_name: "elasticbeanstalk-us-east-1-755106058900"
-  bucket_path: "docker-react"
+  bucket_path: "my-docker-react-app"
   # any time we push code to branch master, deploy
   on:
     branch: master
